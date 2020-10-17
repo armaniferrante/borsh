@@ -1,6 +1,8 @@
 pub use borsh_derive::{BorshDeserialize, BorshSchema, BorshSerialize};
 
 pub mod de;
+#[cfg(any(feature = "serum-client", feature = "serum-program"))]
+mod pubkey;
 pub mod schema;
 pub mod schema_helpers;
 pub mod ser;
